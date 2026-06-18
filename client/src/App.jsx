@@ -1,0 +1,55 @@
+import React from "react";
+import { BrowserRouter as Router,Routes,Route} from "react-router";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./pages/home";
+import About from "./pages/About";
+import Disclaimer from "./pages/Disclaimer";
+import ReturnPolicy from "./pages/ReturnPolicy";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import ProductDetail from "./pages/ProductDetail";
+import Shop from "./pages/Shop";
+import Checkout from "./pages/Checkout";
+import OrderSuccess from "./pages/OrderSuccess";
+import Profile from "./pages/Profile";
+import Cart from "./pages/Cart";
+
+import AdminDashboard from './admin/Admindashboard';
+import AddProduct from './admin/AddProduct';
+import AdminProducts from './admin/AdminProducts';
+import AdminUsers from './admin/AdminUsers';
+import EditProduct from './admin/EditProduct';
+import AdminOrders from './admin/AdminOrders';
+
+
+function App() {
+  return (
+    <Router>
+      <Navbar/>
+      <Routes>
+        <Route path= "/" element={<Home/>} />
+        <Route path= "/About" element={<About/>} />
+        <Route path= "/disclaimer" element={<Disclaimer/>} />
+        <Route path= "/return" element={<ReturnPolicy/>} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/ordersuccess" element={<OrderSuccess />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/admin/add-product" element={<AddProduct />} />
+        <Route path="/admin/products" element={<AdminProducts />} />
+        <Route path="/admin/users" element={<AdminUsers />} />
+        <Route path="/admin/edit-product/:id" element={<EditProduct />} />
+        <Route path="/admin/orders" element={<AdminOrders />} />
+      </Routes>
+      <Footer/>
+    </Router>
+  );
+}
+
+export default App;
