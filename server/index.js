@@ -27,9 +27,9 @@ app.use('/api/analytics', require('./routes/analyitcsRoutes'));
 if (process.env.NODE_ENV === 'production') { // check whether your app running in production mode...
   app.use(express.static(path.join(__dirname, '../client/build'))); // serve all files insinde build folder
 
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client/build/index.html'));
-  });
+  app.use((req, res) => {
+  res.sendFile(path.resolve(__dirname, '../client/build/index.html'));
+});
 } else {
   app.get('/', (req, res) => {
     res.send('ShopNest API is running in Development mode...');
