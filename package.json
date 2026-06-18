@@ -1,0 +1,19 @@
+{
+  "name": "shopnest-full-stack",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Vishnu",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "install": "cd server && npm install && cd ../client && npm install",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm start",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build" : "cd client && npm run build"
+  },
+  "dependencies": {
+    "concurrently": "^10.0.3"
+  }
+} 
