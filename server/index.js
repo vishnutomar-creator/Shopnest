@@ -25,10 +25,10 @@ app.use('/api/analytics', require('./routes/analyitcsRoutes'));
 
 // Serve frontend in production
 if (process.env.NODE_ENV === 'production') { // check whether your app running in production mode...
-  app.use(express.static(path.join(__dirname, '../frontend/build'))); // serve all files insinde build folder
-  
-  app.use((req, res) => {
-    res.sendFile(path.resolve(__dirname, '../frontend/build/index.html'));
+  app.use(express.static(path.join(__dirname, '../client/build'))); // serve all files insinde build folder
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../client/build/index.html'));
   });
 } else {
   app.get('/', (req, res) => {
