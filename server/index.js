@@ -3,6 +3,9 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const connectDB = require('./config/db');
 const path = require('path');
+const dns = require("dns");
+
+dns.setDefaultResultOrder("ipv4first");
 
 dotenv.config();
 connectDB();
