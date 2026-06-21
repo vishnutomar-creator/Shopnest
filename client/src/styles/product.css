@@ -1,3 +1,27 @@
+/* Container Layouts */
+.home-container,
+.shop-container,
+.checkout-container,
+.auth-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 50px 40px;
+}
+
+@media (max-width: 768px) {
+  .home-container,
+  .shop-container,
+  .checkout-container,
+  .auth-container {
+    padding: 30px 20px;
+  }
+}
+
+.home-container h2,
+.shop-container h2 {
+  margin-bottom: 40px;
+}
+
 /* Hero Banner */
 .hero-banner {
   background: radial-gradient(circle at top right, rgba(249, 115, 22, 0.2), transparent 60%), linear-gradient(135deg, #18181b 0%, #09090b 100%);

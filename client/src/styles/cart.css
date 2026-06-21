@@ -1,6 +1,13 @@
 .cart-container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
+  padding: 50px 40px;
+}
+
+@media (max-width: 768px) {
+  .cart-container {
+    padding: 30px 20px;
+  }
 }
 
 .cart-layout {
